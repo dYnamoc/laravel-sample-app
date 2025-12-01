@@ -46,3 +46,21 @@ php artisan key:generate
 
 # Use sqlite for simplicity
 touch database/database.sqlite
+
+In your .env:
+
+DB_CONNECTION=sqlite
+DB_DATABASE=/absolute/path/to/project/database/database.sqlite
+
+
+Run migrations:
+
+php artisan migrate
+php artisan serve
+
+
+Open in browser:
+
+Web UI: http://127.0.0.1:8000/posts
+
+API: GET http://127.0.0.1:8000/api/posts
